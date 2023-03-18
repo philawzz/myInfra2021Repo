@@ -9,9 +9,9 @@ resource "aws_instance" "mySonarInstance" {
       }
     }
 
-data "aws_vpc" "selected" {
-  id = "vpc-043007f00a536bcbf"
-}	
+# data "aws_vpc" "selected" {
+#   id = "vpc-043007f00a536bcbf"
+# }	
 
  resource "aws_security_group" "sonar-sg-2022" {
       name        = "security_sonar_group_2022"
