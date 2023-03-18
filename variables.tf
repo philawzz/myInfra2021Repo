@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "key_name" { 
     description = " SSH keys to connect to ec2 instance" 
-    default     =  "mySep22Key" 
+    default     =  "Mac.pem" 
 }
 
 variable "instance_type" { 
@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "security_group" { 
     description = "Name of security group" 
-    default     = "jenkins-sgroup-dec-2021" 
+    default     = "jenkins-sgroup" 
 }
 
 variable "tag_name" { 
@@ -23,8 +23,8 @@ variable "tag_name" {
     default     = "my-ec2-instance" 
 } 
 variable "ami_id" { 
-    description = "AMI for Ubuntu Ec2 instance" 
-    default     = "ami-0ee23bfc74a881de5" 
+    description = "AMI for Ec2 instance" 
+    default     = "ami-02f3f602d23f1659d" 
 }
 variable "versioning" {
     type        = bool
