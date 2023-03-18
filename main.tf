@@ -2,18 +2,22 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_vpc" "main" {
-  cidr_block = "172.16.0.0/16"
-  instance_tenancy = "default"
-  tags = {
-    Name = "main"
-  }
-}
+# resource "aws_vpc" "main" {
+#   cidr_block = "172.16.0.0/16"
+#   instance_tenancy = "default"
+#   tags = {
+#     Name = "main"
+#   }
+# }
+data "aws_vpc" "selected" {
+  id = "vpc-043007f00a536bcbf"
+}	
+            
 
 #Create security group with firewall rules
 resource "aws_security_group" "jenkins-sg-2022" {
   name        = var.security_group
-  vpc_id = "aws_vpc.main.id"
+  vpc_id = data.aws_vpc.selected.id
   description = "security group for Ec2 instance"
 
   ingress {
