@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "mytestapibucket"
+    bucket = "sigmatek-terraform-state"
     key = "main"
     region = "us-east-1"
-    dynamodb_table = "Teraform-lock"
+    dynamodb_table = "terraform-state-lock"
   }
 }
