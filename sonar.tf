@@ -14,7 +14,7 @@ resource "aws_instance" "mySonarInstance" {
  resource "aws_security_group" "sonar-sg-2022" {
       name        = "security_sonar_group_2022"
       description = "security group for Sonar"
-       vpc_id = data.aws_vpc.selected.id
+       vpc_id = aws_vpc.main.id
 
       ingress {
         from_port   = 9000
