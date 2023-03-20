@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket = "sigmatek-terraform-state"
     key = "main"
-    region = "us-east-1"
+    region = "eu-west-2"
     dynamodb_table = "terraform-state-lock"
   }
 }
