@@ -1,11 +1,11 @@
 variable "aws_region" {
        description = "The AWS region to create things in." 
-       default     = "us-east-1" 
+       default     = "eu-west-2" 
 }
 
 variable "key_name" { 
     description = " SSH keys to connect to ec2 instance" 
-    default     =  "Mac.pem" 
+    default     =  "London02.pem" 
 }
 
 variable "instance_type" { 
@@ -24,7 +24,7 @@ variable "tag_name" {
 } 
 variable "ami_id" { 
     description = "AMI for Ec2 instance" 
-    default     = "ami-0557a15b87f6559cf"
+    default     = "ami-0aaa5410833273cfe"
 }
 variable "versioning" {
     type        = bool
